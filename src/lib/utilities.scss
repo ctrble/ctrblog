@@ -1,0 +1,82 @@
+// general
+
+$spacer: 2rem;
+
+// min-widths
+
+$phone: 576px;
+$tablet: 768px;
+$desktop: 992px;
+$wide: 1200px;
+
+// fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@531&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@515&display=swap');
+
+$sans-serif: 'Epilogue', sans-serif;
+$serif: 'Kreon', serif;
+
+$body-font-size: 1.8rem;
+
+@mixin readability-width($font-size) {
+  // calculates width of about 80 characters
+  // `ch` units are based on the size of 0
+  // which is usually 70-80% wider than other chars
+  max-width: calc(80ch * 0.75);
+  font-size: $font-size;
+  width: 100%;
+}
+
+@mixin sans-serif-line-height-faker {
+  // special padding to suit Epilogue font's cap height
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+$link-transition: color 250ms ease-in-out;
+
+// light mode
+
+$undefaced-off-white: #ffffe4;
+$self-addressed-pinkish-brown: #b17261;
+$accosted-brick-red: #8f1402;
+
+$primary-light-color: $accosted-brick-red;
+$secondary-light-color: $undefaced-off-white;
+$accent-light-color: $self-addressed-pinkish-brown;
+
+// dark mode
+
+$annihilating-duck-egg-blue: #c3fbf4;
+$abstemious-off-blue: #5684ae;
+$divorced-black: #1a1a1a;
+
+$primary-dark-color: $divorced-black;
+$secondary-dark-color: $annihilating-duck-egg-blue;
+$accent-dark-color: $abstemious-off-blue;
+
+@mixin accent-focus-border-bottom($size) {
+  // sets focus styles while preventing reflow/shift
+  outline: none;
+  border: $size dashed transparent;
+  &:focus {
+    border-color: $accent-light-color;
+    @media (prefers-color-scheme: dark) {
+      border-color: $accent-dark-color;
+    }
+  }
+}
+
+@mixin accent-focus-border-bottom-bright($size) {
+  // sets focus styles while preventing reflow/shift
+  outline: none;
+  border: $size dashed transparent;
+  &:focus {
+    border-color: $primary-light-color;
+    @media (prefers-color-scheme: dark) {
+      border-color: $secondary-dark-color;
+    }
+  }
+}

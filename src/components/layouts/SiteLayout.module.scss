@@ -1,0 +1,24 @@
+@import 'src/lib/utilities.scss';
+
+.stretch {
+  min-height: 100vh;
+
+  // light/dark mode
+  background-color: $secondary-light-color;
+  @media (prefers-color-scheme: dark) {
+    background-color: $primary-dark-color;
+  }
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 2rem;
+}
+
+.content {
+  flex: 1 1 auto;
+  @include readability-width($body-font-size);
+}

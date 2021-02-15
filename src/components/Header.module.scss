@@ -1,0 +1,48 @@
+@import 'src/lib/utilities.scss';
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacer/2;
+
+  // light/dark mode
+  background-color: $primary-light-color;
+  @media (prefers-color-scheme: dark) {
+    background-color: $secondary-dark-color;
+  }
+}
+
+.nav {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.link {
+  margin-right: $spacer/2;
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  font-family: $sans-serif;
+  font-size: $spacer;
+  font-variation-settings: 'wght' 900;
+  text-decoration: none;
+  transition: $link-transition;
+
+  // light/dark mode
+  color: $secondary-light-color;
+  @media (prefers-color-scheme: dark) {
+    color: $primary-dark-color;
+  }
+  &:hover {
+    color: $accent-light-color;
+    @media (prefers-color-scheme: dark) {
+      color: $accent-dark-color;
+    }
+  }
+  @include sans-serif-line-height-faker;
+  @include accent-focus-border-bottom(0.1rem);
+}

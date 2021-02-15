@@ -1,0 +1,156 @@
+@import 'src/lib/utilities.scss';
+
+@mixin search-sizing {
+  width: 100%;
+  @media (min-width: $tablet) {
+    width: 50%;
+  }
+  @media (min-width: $desktop) {
+    width: 35%;
+  }
+  @media (min-width: $wide) {
+    width: 35rem;
+  }
+}
+
+.search {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+  // mimic nav padding
+  right: $spacer/2;
+  left: $spacer/2;
+}
+
+.input {
+  pointer-events: all;
+  padding: 0.5rem 1rem;
+  font-family: $sans-serif;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 15rem;
+  transition: width 250ms ease-in-out;
+
+  // light/dark mode
+  color: $secondary-light-color;
+  background-color: $accent-light-color;
+  @media (prefers-color-scheme: dark) {
+    color: $secondary-dark-color;
+    background-color: $accent-dark-color;
+  }
+  &::placeholder {
+    color: $secondary-light-color;
+    @media (prefers-color-scheme: dark) {
+      color: $secondary-dark-color;
+    }
+  }
+
+  &:focus {
+    @include search-sizing();
+
+    // sets focus styles while preventing reflow/shift
+    outline-offset: 0.5rem;
+    outline: 0.1rem dashed $accent-light-color;
+    @media (prefers-color-scheme: dark) {
+      outline: 0.1rem dashed $accent-dark-color;
+    }
+  }
+}
+
+.results {
+  position: absolute;
+  pointer-events: all;
+  z-index: 100;
+  top: 5.3rem;
+  right: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  @include search-sizing();
+
+  // animation
+  transition: opacity 250ms cubic-bezier(0.85, 0, 0.15, 1),
+    background-color 250ms cubic-bezier(0.85, 0, 0.15, 1),
+    width 200ms ease-in-out;
+
+  // hidden state w/ light/dark mode
+  opacity: 0;
+  border: 0 solid transparent;
+  background-color: $accent-light-color;
+  @media (prefers-color-scheme: dark) {
+    background-color: $primary-dark-color;
+  }
+
+  // revealed state
+  &.active {
+    opacity: 1;
+    border: 0.2rem solid;
+
+    // light/dark mode
+    border-color: $primary-light-color;
+    background-color: $accent-light-color;
+    @media (prefers-color-scheme: dark) {
+      border-color: $secondary-dark-color;
+      background-color: $accent-dark-color;
+    }
+  }
+}
+
+// used for positioning and sizing links
+$search-spacer: 1.2rem;
+$search-spacer-outer: 0.5rem;
+$search-spacer-inner: 0.3rem;
+$search-spaced-height: 2;
+
+.item {
+  font-family: $sans-serif;
+  font-variation-settings: 'wght' 400;
+  font-size: $search-spacer;
+  line-height: $search-spaced-height;
+  padding-top: $search-spacer;
+  padding-bottom: $search-spacer;
+  padding-left: $search-spacer + $search-spacer-outer;
+  padding-right: $search-spacer + $search-spacer-outer;
+  border-left: 0.6rem solid;
+  border-right: 0.6rem solid;
+  border-bottom: 0.6rem solid;
+
+  // light/dark mode
+  color: $secondary-light-color;
+  border-color: $secondary-light-color;
+  &:first-of-type {
+    border-top: 0.6rem solid $secondary-light-color;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: $primary-dark-color;
+    border-color: $primary-dark-color;
+    &:first-of-type {
+      border-top: 0.6rem solid $primary-dark-color;
+    }
+  }
+}
+
+.link {
+  margin-left: -0.5rem; // adjust for focus outline
+  margin-right: $search-spacer - $search-spacer-inner;
+  font-variation-settings: 'wght' 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: $link-transition;
+
+  @include accent-focus-border-bottom-bright(0.1rem);
+  @include sans-serif-line-height-faker;
+
+  // light/dark mode
+  color: $primary-light-color;
+  @media (prefers-color-scheme: dark) {
+    color: $secondary-dark-color;
+  }
+  &:hover {
+    color: $secondary-light-color;
+    @media (prefers-color-scheme: dark) {
+      color: $primary-dark-color;
+    }
+  }
+}
