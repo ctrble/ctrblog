@@ -1,4 +1,4 @@
-[![Deployment Status](https://img.shields.io/endpoint?url=https://next-md-blog-template.vercel.app/api/deployment)](https://next-md-blog-template.vercel.app/)
+[![Deployment Status](https://img.shields.io/endpoint?url=https://ctrblog.vercel.app/api/deployment)](https://next-md-blog-template.vercel.app/)
 
 # NextJS Starter Blog Template with Markdown Files
 
@@ -9,11 +9,7 @@ This is a basic blog template that includes:
 - Content sourced from Markdown files
 - Search
 
-Test the [demo](https://next-md-blog-template.vercel.app/) out for yourself.
-
 ## Getting Started
-
-You can start a new repo by using this as a [template](https://github.com/ctrble/next-md-blog-template/generate).
 
 Requires: `yarn`, `node`.
 
@@ -51,9 +47,7 @@ Browserslist is also used to determine supported browsers and provide those sett
 
 ## Deployment
 
-This project is most easily deployed via [Vercel](https://vercel.com/), but should work on other platforms if they support serverless functions. You may need to install and configure additional packages if you deploy elsewhere, such as [next-on-netlify](https://github.com/FinnWoelm/next-on-netlify) if you'd prefer to use Netlify.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/ctrble/next-md-blog-template)
+This project is most easily deployed via [Vercel](https://vercel.com/), but should work on other platforms if they support serverless functions.
 
 ## Contributing
 
