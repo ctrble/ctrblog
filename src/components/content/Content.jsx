@@ -13,7 +13,7 @@ const Content = ({ title, description, content }) => (
     <p className={styles.description}>{description}</p>
 
     <div className={styles.body}>
-      <ReactMarkdown escapeHtml={false} source={content} />
+      <ReactMarkdown escapeHtml={false} source={content} linkTarget="_blank" />
     </div>
   </article>
 );

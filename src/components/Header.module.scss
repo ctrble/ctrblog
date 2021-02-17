@@ -44,5 +44,5 @@
     }
   }
   @include sans-serif-line-height-faker;
-  @include accent-focus-border-bottom(0.1rem);
+  @include focus-border-accent(0.1rem);
 }

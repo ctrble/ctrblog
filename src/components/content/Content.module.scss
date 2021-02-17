@@ -42,4 +42,27 @@
   @media (prefers-color-scheme: dark) {
     color: $secondary-dark-color;
   }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  a {
+    font-variation-settings: 'wght' 300;
+    text-decoration: none;
+    transition: $link-transition;
+
+    // light/dark mode
+    color: $accent-light-color;
+    @media (prefers-color-scheme: dark) {
+      color: $accent-dark-color;
+    }
+    &:hover {
+      color: $primary-light-color;
+      @media (prefers-color-scheme: dark) {
+        color: $secondary-dark-color;
+      }
+    }
+    @include focus-border-bottom-primary(0.1rem);
+  }
 }

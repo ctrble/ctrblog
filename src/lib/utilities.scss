@@ -57,7 +57,7 @@ $primary-dark-color: $divorced-black;
 $secondary-dark-color: $annihilating-duck-egg-blue;
 $accent-dark-color: $abstemious-off-blue;
 
-@mixin accent-focus-border-bottom($size) {
+@mixin focus-border-accent($size) {
   // sets focus styles while preventing reflow/shift
   outline: none;
   border: $size dashed transparent;
@@ -69,10 +69,34 @@ $accent-dark-color: $abstemious-off-blue;
   }
 }
 
-@mixin accent-focus-border-bottom-bright($size) {
+@mixin focus-border-bottom-accent($size) {
+  // sets focus styles while preventing reflow/shift
+  outline: none;
+  border-bottom: $size dashed transparent;
+  &:focus {
+    border-color: $accent-light-color;
+    @media (prefers-color-scheme: dark) {
+      border-color: $accent-dark-color;
+    }
+  }
+}
+
+@mixin focus-border-primary($size) {
   // sets focus styles while preventing reflow/shift
   outline: none;
   border: $size dashed transparent;
+  &:focus {
+    border-color: $primary-light-color;
+    @media (prefers-color-scheme: dark) {
+      border-color: $secondary-dark-color;
+    }
+  }
+}
+
+@mixin focus-border-bottom-primary($size) {
+  // sets focus styles while preventing reflow/shift
+  outline: none;
+  border-bottom: $size dashed transparent;
   &:focus {
     border-color: $primary-light-color;
     @media (prefers-color-scheme: dark) {

@@ -35,7 +35,7 @@
   text-decoration: none;
   transition: $link-transition;
 
-  @include accent-focus-border-bottom(0.1rem);
+  @include focus-border-accent(0.1rem);
   @include sans-serif-line-height-faker;
 
   // light/dark mode

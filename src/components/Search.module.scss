@@ -139,7 +139,7 @@ $search-spaced-height: 2;
   text-decoration: none;
   transition: $link-transition;
 
-  @include accent-focus-border-bottom-bright(0.1rem);
+  @include focus-border-primary(0.1rem);
   @include sans-serif-line-height-faker;
 
   // light/dark mode
