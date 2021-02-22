@@ -11,22 +11,26 @@ const formattedDate = (date) => {
 export const fileContent = (directory, file) => {
   const filePath = path.resolve(`./public/content/${directory}/${file}`);
 
-  // retrieve content from file
-  const markdownWithMetadata = fs.readFileSync(filePath).toString();
+  try {
+    // retrieve content from file
+    const markdownWithMetadata = fs.readFileSync(filePath).toString();
 
-  // parse markdown and format date
-  const { data, content } = matter(markdownWithMetadata);
-  const frontmatter = {
-    ...data,
-    date: formattedDate(data.date),
-  };
+    // parse markdown and format date
+    const { data, content } = matter(markdownWithMetadata);
+    const frontmatter = {
+      ...data,
+      date: formattedDate(data.date),
+    };
 
-  // use the filename as the slug and return the content
-  return {
-    slug: file.replace('.md', ''),
-    frontmatter,
-    content,
-  };
+    // use the filename as the slug and return the content
+    return {
+      slug: file.replace('.md', ''),
+      frontmatter,
+      content,
+    };
+  } catch (error) {
+    return null;
+  }
 };
 
 export const directoryContent = (directory, fullPath = '') => {
@@ -35,28 +39,40 @@ export const directoryContent = (directory, fullPath = '') => {
     fullPath === '' ? `${process.cwd()}/public/content/${directory}` : fullPath;
 
   // get files from content directory
-  const files = fs.readdirSync(directoryPath, 'utf8');
+  try {
+    const files = fs.readdirSync(directoryPath, 'utf8');
+    // retrieve content from files
+    const fileContents = files
+      .map((file) => fileContent(directory, file))
+      .sort(
+        (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+      );
 
-  // retrieve content from files
-  const fileContents = files
-    .map((file) => fileContent(directory, file))
-    .sort(
-      (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
-    );
+    if (fileContents.length === 0) {
+      // because empty arrays are truthy
+      return null;
+    }
 
-  return fileContents;
+    return fileContents;
+  } catch (error) {
+    return null;
+  }
 };
 
 export const slugs = (directory) => {
   const filesPath = path.resolve(`./public/content/${directory}`);
 
-  const files = fs.readdirSync(filesPath);
+  try {
+    const files = fs.readdirSync(filesPath);
 
-  const paths = files.map((file) => ({
-    params: {
-      slug: file.replace('.md', ''),
-    },
-  }));
+    const paths = files.map((file) => ({
+      params: {
+        slug: file.replace('.md', ''),
+      },
+    }));
 
-  return paths;
+    return paths;
+  } catch (error) {
+    return null;
+  }
 };
