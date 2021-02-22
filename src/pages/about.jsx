@@ -5,21 +5,26 @@ import { directoryContent } from 'src/lib/getContent';
 
 import SiteLayout from 'src/components/layouts/SiteLayout';
 import Content from 'src/components/content/Content';
+import Body from 'src/components/Body';
 
-const About = ({ about }) => {
-  return (
-    <div>
-      {about.map(({ frontmatter, content }) => (
+const About = ({ about }) => (
+  <div>
+    {about ? (
+      about.map(({ frontmatter, content }) => (
         <Content
           key={frontmatter.title}
           title={frontmatter.title}
           description={frontmatter.description}
           content={content}
         />
-      ))}
-    </div>
-  );
-};
+      ))
+    ) : (
+      <Body>
+        <p>Sorry, nothing to see here!</p>
+      </Body>
+    )}
+  </div>
+);
 
 export async function getStaticProps() {
   const about = directoryContent('about');
@@ -38,7 +43,11 @@ About.getLayout = (page) => <SiteLayout>{page}</SiteLayout>;
 About.propTypes = {
   about: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.object, PropTypes.string])
-  ).isRequired,
+  ),
+};
+
+About.defaultProps = {
+  about: null,
 };
 
 export default About;
