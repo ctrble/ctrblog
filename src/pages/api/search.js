@@ -15,6 +15,6 @@ export default (req, res) => {
     }
   );
   const results = searcher.search(req.query.q);
-  const formattedResults = JSON.stringify(results);
+  const formattedResults = JSON.stringify({ results });
   res.status(200).json(formattedResults);
 };
