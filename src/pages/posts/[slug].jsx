@@ -17,7 +17,13 @@ const Slug = ({ post }) => (
 );
 
 export async function getStaticPaths() {
-  const paths = slugs('posts');
+  // const paths = slugs('posts');
+  const postSlugs = slugs('posts');
+  const paths = postSlugs.map((slug) => ({
+    params: {
+      slug,
+    },
+  }));
 
   return {
     paths,

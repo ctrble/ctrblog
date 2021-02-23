@@ -56,17 +56,18 @@ export const directoryContent = (directory, fullPath = '') => {
 export const slugs = (directory) => {
   const filesPath = path.resolve(`./public/content/${directory}`);
 
-  try {
-    const files = fs.readdirSync(filesPath);
+  const files = fs.readdirSync(filesPath);
+  return files.map((file) => file.replace('.md', ''));
 
-    const paths = files.map((file) => ({
-      params: {
-        slug: file.replace('.md', ''),
-      },
-    }));
-
-    return paths;
-  } catch (error) {
-    return null;
-  }
+  // try {
+  //   const files = fs.readdirSync(filesPath);
+  //   const paths = files.map((file) => ({
+  //     params: {
+  //       slug: file.replace('.md', ''),
+  //     },
+  //   }));
+  //   return paths;
+  // } catch (error) {
+  //   return null;
+  // }
 };
