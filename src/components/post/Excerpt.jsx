@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 import Header from './Header';
-import Body from '../Body';
+import Body from './Body';
 
 import styles from './Excerpt.module.scss';
 

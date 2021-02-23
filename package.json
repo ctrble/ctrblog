@@ -8,10 +8,9 @@
     "start": "next start",
     "lint-code": "eslint . --fix '**/*.{js,jsx}'",
     "lint-styles": "stylelint **/*.scss --fix",
-    "format-all": "prettier --write ."
+    "format-all": "prettier write ."
   },
   "dependencies": {
-    "classnames": "^2.2.6",
     "deployment-badge": "^1.1.0",
     "eslint-plugin-react": "^7.20.6",
     "fs": "^0.0.1-security",
@@ -38,7 +37,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react-hooks": "^4.1.0",
-    "prettier": "^2.1.2",
+    "prettier": "^2.0.5",
     "stylelint": "^13.10.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
