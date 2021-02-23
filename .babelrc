@@ -7,7 +7,5 @@
 // plugin-transform-runtime
 // styled-jsx
 {
-  "presets": [
-    "airbnb"
-  ]
+  "presets": ["airbnb"]
 }

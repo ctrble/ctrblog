@@ -1,1 +1,3 @@
 .next
+**.bundle.js
+**.js.map
