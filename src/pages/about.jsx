@@ -8,8 +8,8 @@ import Content from 'src/components/content/Content';
 import Body from 'src/components/Body';
 
 const About = ({ about }) => (
-  <div>
-    {about ? (
+  <>
+    {about && about.length ? (
       about.map(({ frontmatter, content }) => (
         <Content
           key={frontmatter.title}
@@ -23,7 +23,7 @@ const About = ({ about }) => (
         <p>Sorry, nothing to see here!</p>
       </Body>
     )}
-  </div>
+  </>
 );
 
 export async function getStaticProps() {

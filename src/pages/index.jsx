@@ -9,7 +9,7 @@ import Body from 'src/components/Body';
 
 const Home = ({ posts }) => (
   <>
-    {posts ? (
+    {posts && posts.length ? (
       posts.map(({ frontmatter, slug }) => (
         <Excerpt
           key={slug}

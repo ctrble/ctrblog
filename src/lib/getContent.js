@@ -47,12 +47,6 @@ export const directoryContent = (directory, fullPath = '') => {
       .sort(
         (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
       );
-
-    if (fileContents.length === 0) {
-      // because empty arrays are truthy
-      return null;
-    }
-
     return fileContents;
   } catch (error) {
     return null;
