@@ -2,6 +2,8 @@ import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
 
+const createSlugFromMd = (filename) => filename.replace('.md', '');
+
 const formattedDate = (date) => {
   // get day in format: Month day, Year. e.g. April 19, 2020
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -24,7 +26,7 @@ export const fileContent = (directory, file) => {
 
     // use the filename as the slug and return the content
     return {
-      slug: file.replace('.md', ''),
+      slug: createSlugFromMd(file),
       frontmatter,
       content,
     };
@@ -49,29 +51,17 @@ export const directoryContent = (directory, fullPath = '') => {
       );
     return fileContents;
   } catch (error) {
-    return null;
+    return [];
   }
 };
 
-export const slugs = (directory) => {
+export const directorySlugs = (directory) => {
   const filesPath = path.resolve(`./public/content/${directory}`);
 
   try {
     const files = fs.readdirSync(filesPath);
-    return files.map((file) => file.replace('.md', ''));
+    return files.map((file) => createSlugFromMd(file));
   } catch (error) {
     return [];
   }
-
-  // try {
-  //   const files = fs.readdirSync(filesPath);
-  //   const paths = files.map((file) => ({
-  //     params: {
-  //       slug: file.replace('.md', ''),
-  //     },
-  //   }));
-  //   return paths;
-  // } catch (error) {
-  //   return null;
-  // }
 };

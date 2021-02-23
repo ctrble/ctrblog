@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { fileContent, slugs } from 'src/lib/getContent';
+import { fileContent, directorySlugs } from 'src/lib/getContent';
 
 import SiteLayout from 'src/components/layouts/SiteLayout';
 import PostLayout from 'src/components/layouts/PostLayout';
@@ -17,8 +17,7 @@ const Slug = ({ post }) => (
 );
 
 export async function getStaticPaths() {
-  // const paths = slugs('posts');
-  const postSlugs = slugs('posts');
+  const postSlugs = directorySlugs('posts');
   const paths = postSlugs.map((slug) => ({
     params: {
       slug,
