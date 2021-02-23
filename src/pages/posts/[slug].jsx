@@ -7,16 +7,14 @@ import SiteLayout from 'src/components/layouts/SiteLayout';
 import PostLayout from 'src/components/layouts/PostLayout';
 import Post from 'src/components/post/Post';
 
-const Slug = ({ post }) => {
-  return (
-    <Post
-      title={post.frontmatter.title}
-      date={post.frontmatter.date}
-      description={post.frontmatter.description}
-      content={post.content}
-    />
-  );
-};
+const Slug = ({ post }) => (
+  <Post
+    title={post.frontmatter.title}
+    date={post.frontmatter.date}
+    description={post.frontmatter.description}
+    content={post.content}
+  />
+);
 
 export async function getStaticPaths() {
   const paths = slugs('posts');
