@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import MarkdownContent from 'src/components/MarkdownContent';
-import PostHeader from './PostHeader';
+import PostHeader from 'src/components/Post/PostHeader';
 
 import styles from './Post.module.scss';
 
