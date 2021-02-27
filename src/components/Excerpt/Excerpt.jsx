@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 import Body from 'src/components/elements/Body';
-import PostHeader from '../Post/PostHeader';
+import PostHeader from 'src/components/BlogPost/PostHeader';
 
 import styles from './Excerpt.module.scss';
 
