@@ -1,11 +1,11 @@
 @import 'src/lib/utilities.scss';
 
-.header {
+.postHeader {
   display: flex;
   flex-direction: column;
 }
 
-.header__title {
+.postHeader__title {
   margin-bottom: $spacer/2;
   font-family: $sans-serif;
   font-size: clamp(2rem, 3vw, 4rem);
@@ -21,7 +21,7 @@
   }
 }
 
-.header__date {
+.postHeader__date {
   align-self: flex-end;
   margin-bottom: $spacer;
   font-family: $sans-serif;

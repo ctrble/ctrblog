@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-import Header from './Header';
+import PostHeader from '../Post/PostHeader';
 import Body from '../Body';
 
 import styles from './Excerpt.module.scss';
 
 const Excerpt = ({ title, date, description, slug }) => (
   <article key={title} className={styles.excerpt}>
-    <Header title={title} date={date} />
+    <PostHeader title={title} date={date} />
 
     <Body>
       <p>{description}</p>

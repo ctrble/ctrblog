@@ -1,9 +1,9 @@
 @import 'src/lib/utilities.scss';
 
-.body {
+.markdownContent {
   margin-bottom: $spacer;
   font-size: $body-font-size;
-  line-height: 2;
+  line-height: 1.75;
   font-family: $serif;
   font-variation-settings: 'wght' 300;
 
