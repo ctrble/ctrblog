@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { directoryContent } from 'src/lib/getContent';
 
 import SiteLayout from 'src/components/layouts/SiteLayout';
+import Body from 'src/components/elements/Body';
 import Excerpt from 'src/components/Excerpt';
-import Body from 'src/components/Body';
 
 const Home = ({ posts }) => (
   <>

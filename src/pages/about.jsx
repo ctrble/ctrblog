@@ -5,9 +5,9 @@ import { v4 as uuidv4 } from 'uuid';
 import { directoryContent } from 'src/lib/getContent';
 
 import SiteLayout from 'src/components/layouts/SiteLayout';
-import Body from 'src/components/Body';
 import PageHeader from 'src/components/PageHeader';
 import MarkdownContent from 'src/components/MarkdownContent';
+import Body from 'src/components/elements/Body';
 
 const About = ({ about }) => (
   <>

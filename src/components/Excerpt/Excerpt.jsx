@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
+import Body from 'src/components/elements/Body';
 import PostHeader from '../Post/PostHeader';
-import Body from '../Body';
 
 import styles from './Excerpt.module.scss';
 

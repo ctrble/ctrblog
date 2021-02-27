@@ -1,6 +1,6 @@
-@import 'src/lib/utilities.scss';
+@import 'src/lib/styles/utilities';
 
-.nav {
+.latestPosts {
   margin-bottom: $spacer * 2;
   font-size: 2rem;
   text-transform: uppercase;
@@ -14,11 +14,11 @@
   }
 }
 
-.list {
+.latestPosts__list {
   margin: 0;
 }
 
-.item {
+.latestPosts__item {
   font-size: 1.2rem;
   text-transform: initial;
   font-variation-settings: 'wght' 400;
@@ -28,7 +28,7 @@
   }
 }
 
-.link {
+.latestPosts__link {
   display: inline-block;
   position: relative;
   margin: 0;
