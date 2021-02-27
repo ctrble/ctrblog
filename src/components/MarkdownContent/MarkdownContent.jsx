@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown/with-html';
 
-import Image from 'src/components/Image';
-import Code from 'src/components/Code';
+import Image from 'src/components/elements/Image';
+import Code from 'src/components/elements/Code';
 
 import styles from './MarkdownContent.module.scss';
 

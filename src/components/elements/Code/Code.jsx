@@ -13,6 +13,7 @@ const Code = ({ value, language, inline }) => {
   const [isMounted, setIsMounted] = useState(initialState);
   const [isDarkMode, setIsDarkMode] = useState(initialState);
 
+  // TODO: don't use this
   useEffect(() => {
     setIsMounted(true);
   }, []);
