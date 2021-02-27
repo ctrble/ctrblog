@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import MarkdownContent from 'src/components/MarkdownContent';
-import PostHeader from 'src/components/Post/PostHeader';
+import PostHeader from './PostHeader';
 
-import styles from 'src/components/Post/Post.module.scss';
+import styles from './Post.module.scss';
 
 const Post = ({ title, date, description, content }) => (
   <article key={title} className={styles.post}>
