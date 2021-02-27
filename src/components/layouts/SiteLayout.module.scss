@@ -1,6 +1,6 @@
 @import 'src/lib/utilities.scss';
 
-.stretch {
+.siteLayout {
   min-height: 100vh;
 
   // light/dark mode
@@ -10,7 +10,7 @@
   }
 }
 
-.layout {
+.siteLayout__main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -18,7 +18,7 @@
   padding: 50px 2rem;
 }
 
-.content {
+.siteLayout__content {
   flex: 1 1 auto;
   @include readability-width($body-font-size);
 }

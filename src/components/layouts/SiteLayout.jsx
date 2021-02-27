@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../Header';
+
+import SiteHeader from 'src/components/SiteHeader';
 
 import styles from './SiteLayout.module.scss';
 
 const SiteLayout = ({ children }) => (
-  <div className={styles.stretch}>
-    <Header />
-    <main className={styles.layout}>
-      <section className={styles.content}>{children}</section>
+  <div className={styles.siteLayout}>
+    <SiteHeader />
+    <main className={styles.siteLayout__main}>
+      <section className={styles.siteLayout__content}>{children}</section>
     </main>
   </div>
 );
