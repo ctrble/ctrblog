@@ -11,6 +11,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "beautiful-react-hooks": "^0.35.0",
     "classnames": "^2.2.6",
     "deployment-badge": "^1.1.0",
     "fs": "^0.0.1-security",

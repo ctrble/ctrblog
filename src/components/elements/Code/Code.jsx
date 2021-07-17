@@ -1,26 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import useDarkMode from 'use-dark-mode';
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {
   gruvboxLight,
   gruvboxDark,
 } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 const Code = ({ value, language, inline }) => {
-  const initialState = false;
-  const darkMode = useDarkMode(initialState);
-  const [isMounted, setIsMounted] = useState(initialState);
-  const [isDarkMode, setIsDarkMode] = useState(initialState);
-
-  // TODO: don't use this
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const darkMode = useDarkMode();
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    setIsDarkMode(isMounted && darkMode.value);
-  }, [isMounted, darkMode]);
+    if (darkMode && darkMode.value) {
+      setIsDarkMode(darkMode.value);
+    }
+  }, [darkMode]);
 
   const codeTagProps = {
     display: 'inline',
