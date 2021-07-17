@@ -4,19 +4,21 @@ import PropTypes from 'prop-types';
 import { directoryContent } from 'src/lib/getContent';
 
 import SiteLayout from 'src/components/layouts/SiteLayout';
-import Content from 'src/components/content/Content';
-import Body from 'src/components/Body';
+import PageHeader from 'src/components/PageHeader';
+import MarkdownContent from 'src/components/MarkdownContent';
+import Body from 'src/components/elements/Body';
 
 const About = ({ about }) => (
   <>
     {about && about.length ? (
       about.map(({ frontmatter, content }) => (
-        <Content
-          key={frontmatter.title}
-          title={frontmatter.title}
-          description={frontmatter.description}
-          content={content}
-        />
+        <React.Fragment key={frontmatter.date.toString()}>
+          <PageHeader
+            title={frontmatter.title}
+            description={frontmatter.description}
+          />
+          <MarkdownContent content={content} />
+        </React.Fragment>
       ))
     ) : (
       <Body>

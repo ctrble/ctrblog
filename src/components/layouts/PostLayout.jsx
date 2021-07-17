@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Nav from 'src/components/Nav';
+import LatestPosts from 'src/components/LatestPosts';
 
-const PostLayout = ({ children }) => {
-  return (
-    <>
-      <Nav count={5} />
-      {children}
-    </>
-  );
-};
+const PostLayout = ({ children }) => (
+  <>
+    <LatestPosts count={5} />
+    {children}
+  </>
+);
 
 PostLayout.propTypes = {
   children: PropTypes.node,

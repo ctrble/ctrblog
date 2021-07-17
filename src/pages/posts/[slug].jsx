@@ -5,7 +5,7 @@ import { fileContent, directorySlugs } from 'src/lib/getContent';
 
 import SiteLayout from 'src/components/layouts/SiteLayout';
 import PostLayout from 'src/components/layouts/PostLayout';
-import Post from 'src/components/post/Post';
+import Post from 'src/components/BlogPost/Post';
 
 const Slug = ({ post }) => (
   <Post

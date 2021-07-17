@@ -1,11 +1,11 @@
-@import 'src/lib/utilities.scss';
+@import 'src/lib/styles/utilities';
 
 .post {
   margin-bottom: $spacer * 5;
 }
 
 .post__description {
-  margin-bottom: $spacer * 2;
+  margin-bottom: $spacer * 2.5;
   padding: 3rem;
   font-size: 1.4rem;
   font-family: $sans-serif;
