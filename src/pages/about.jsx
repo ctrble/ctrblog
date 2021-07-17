@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { v4 as uuidv4 } from 'uuid';
 
 import { directoryContent } from 'src/lib/getContent';
 
@@ -13,7 +12,7 @@ const About = ({ about }) => (
   <>
     {about && about.length ? (
       about.map(({ frontmatter, content }) => (
-        <React.Fragment key={uuidv4()}>
+        <React.Fragment key={frontmatter.date.toString()}>
           <PageHeader
             title={frontmatter.title}
             description={frontmatter.description}
