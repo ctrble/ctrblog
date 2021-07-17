@@ -1,6 +1,6 @@
 ---
 title: About
-description: Just a dev
+description: Hello, world
 date: 2021-02-17
 ---
 

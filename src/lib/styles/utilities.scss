@@ -106,9 +106,9 @@ $accent-dark-color: $abstemious-off-blue;
 }
 
 @mixin baseTextStyles {
-  // margin-bottom: $spacer;
   font-size: $body-font-size;
-  line-height: 2;
+  line-height: 1.7;
+  letter-spacing: 0.1ch;
   font-family: $serif;
   font-variation-settings: 'wght' 300;
 
