@@ -41,6 +41,9 @@ export default function Home() {
           <WebLink href='https://github.com/ctrble'>GitHub</WebLink>
         </li>
         <li>
+          <WebLink href='https://codepen.io/ctrble'>Codepen</WebLink>
+        </li>
+        <li>
           <WebLink href='www.linkedin.com/in/charlotte-trible'>
             LinkedIn
           </WebLink>
