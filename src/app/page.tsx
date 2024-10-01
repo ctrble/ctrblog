@@ -1,76 +1,51 @@
-import Image from 'next/image';
-
 import WebLink from '@/components/WebLink';
 
 import styles from './page.module.scss';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        Find Me
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-        <div className={styles.ctas}>
-          <WebLink href='https://github.com'>Haha</WebLink>
-          <a
-            href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/file.svg'
-            alt='File icon'
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/window.svg'
-            alt='Window icon'
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href='https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='https://nextjs.org/icons/globe.svg'
-            alt='Globe icon'
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main className={styles.main}>
+      <p>
+        I've always been drawn to technology and computers, particularly when
+        they pose a challenge to be solved. I first got started with web
+        development when I was a teenager – I even remember writing pseudo-code
+        in a paper notebook while on vacation very far away from my computer.
+        Since then I've fixed countless computers as a certified technician,
+        created many video-games as a fun hobby and co-founded Flyover Indies (a
+        Kansas City area indie game developer community), and led the
+        development of high traffic, delightful websites that truly are all fun
+        and games (including a Webby award winner!).
+      </p>
+
+      <p>
+        Tackling interesting problems and devising solutions brings me joy,
+        which is why I love software engineering. I'm passionate about code that
+        is clear, clean, and consistent. I care deeply about mentoring other
+        engineers and learning from them, delivering on business priorities
+        while balancing technical needs, and serving end-users with an amazing
+        experience. I'm open-minded and adaptable, thrive in a cross functional
+        and collaborative environment, and am not afraid of diving into
+        something unknown or ambiguous.
+      </p>
+
+      <p>
+        My ideal tech stack includes React (particularly Next.js), SCSS Modules,
+        code quality tools (like ESLint, Stylelint, and Prettier), Jest and
+        Playwright tests, Storybook documentation, and CI/CD integration via
+        GitHub Actions. That said, the opportunity to learn new things is always
+        exciting and I'm a pretty quick study.
+      </p>
+      <h2>Find Me</h2>
+      <ol>
+        <li>
+          <WebLink href='https://github.com/ctrble'>GitHub</WebLink>
+        </li>
+        <li>
+          <WebLink href='www.linkedin.com/in/charlotte-trible'>
+            LinkedIn
+          </WebLink>
+        </li>
+      </ol>
+    </main>
   );
 }
