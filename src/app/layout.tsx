@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
+import { Belanosima, Martian_Mono } from 'next/font/google'
 
 import "@/styles/index.scss";
-
-import { Belanosima, Martian_Mono } from 'next/font/google'
 
 const belanosima = Belanosima({
   subsets: ['latin'],
