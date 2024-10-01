@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "format": "prettier --write .",
-    "start": "next start",
-    "lint:js": "eslint --fix"
+    "lint:js": "eslint \".\" --fix",
+    "start": "next start"
   },
   "dependencies": {
     "classnames": "^2.5.1",
