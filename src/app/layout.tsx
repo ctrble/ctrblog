@@ -4,17 +4,17 @@ import { Belanosima, Martian_Mono } from 'next/font/google'
 import "@/styles/index.scss";
 
 const belanosima = Belanosima({
-  subsets: ['latin'],
   display: 'swap',
+  subsets: ['latin'],
   variable: "--font-belanosima",
   weight: ['400', '600', '700'],
 })
 
 const martianMono = Martian_Mono({
-  subsets: ['latin'],
   display: 'swap',
+  subsets: ['latin'],
   variable: "--font-martian-mono",
-  weight: ['400', '600', '700'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
 })
 
 export const metadata: Metadata = {
