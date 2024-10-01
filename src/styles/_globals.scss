@@ -1,3 +1,7 @@
+@use '/src/styles/variables';
+
 body {
-  background-color: coral;
+  background-color: darkslategray;
+  font-family: variables.$font-family-mono;
+  color: cadetblue;
 }
