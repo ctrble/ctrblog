@@ -16,5 +16,6 @@ module.exports = {
   rules: {
     'react-hooks/exhaustive-deps': 'error',
     'react/jsx-props-no-spreading': 'warn',
+    'react/no-unescaped-entities': 'warn',
   },
 };
