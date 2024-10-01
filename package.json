@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "format": "prettier --write .",
     "start": "next start",
-    "lint": "next lint"
+    "lint:js": "eslint --fix"
   },
   "dependencies": {
     "next": "14.2.13",
@@ -18,7 +19,9 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.13",
+    "eslint-config-next": "^14.2.13",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
     "typescript": "^5"
   },
   "packageManager": "yarn@4.5.0"
