@@ -1,3 +1,5 @@
+ @use '/src/styles/variables';
+
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
@@ -13,7 +15,7 @@
   min-height: 100svh;
   padding: 80px;
   gap: 64px;
-  font-family: var(--font-geist-sans);
+  font-family: variables.$font-family-display;
 }
 
 .main {
@@ -24,7 +26,7 @@
 }
 
 .main ol {
-  font-family: var(--font-geist-mono);
+  font-family: variables.$font-family-mono;
   padding-left: 0;
   margin: 0;
   font-size: 14px;
