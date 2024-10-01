@@ -4,4 +4,8 @@
   display: grid;
   place-items: center;
   height: 100dvh;
+
+  > * {
+    max-width: 66ch;
+  }
 }

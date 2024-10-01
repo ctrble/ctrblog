@@ -1,7 +1,18 @@
 @use '/src/styles/variables';
 
 body {
-  background-color: darkslategray;
+  background-color: variables.$color-light;
+  color: variables.$color-dark;
   font-family: variables.$font-family-mono;
-  color: cadetblue;
+  font-size: variables.$font-size-base;
+  font-weight: variables.$font-weight-normal;
+}
+
+h1,
+h2 {
+  font-family: variables.$font-family-display;
+}
+
+p {
+  margin-bottom: variables.$gap-sm;
 }
