@@ -1,11 +1,19 @@
 @use '/src/styles/variables';
 
-body {
+html {
   background-color: variables.$color-light;
+}
+
+body {
   color: variables.$color-dark;
   font-family: variables.$font-family-mono;
   font-size: variables.$font-size-base;
   font-weight: variables.$font-weight-normal;
+}
+
+section {
+  border: 2px solid variables.$color-dark;
+  padding: 2em;
 }
 
 h1,
@@ -15,4 +23,14 @@ h2 {
 
 p {
   margin-bottom: variables.$gap-sm;
+}
+
+a {
+  color: variables.$color-dark;
+}
+
+hr {
+  border-color: variables.$color-dark;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
