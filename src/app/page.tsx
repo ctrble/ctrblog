@@ -7,7 +7,7 @@ export default function Home() {
     <main className={styles.outer}>
       <section className={styles.inner}>
         <div>
-          <h1>Hey! I'm Charlotte and I love building websites.</h1>
+          <h1>Hey! I&apos;m Charlotte and I love building websites.</h1>
           <p>Making things move on the computer screen still sparks joy.</p>
           <hr />
           <h2>Find Me</h2>
