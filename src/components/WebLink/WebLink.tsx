@@ -6,6 +6,15 @@ import isUrl from './isUrl';
 
 import styles from './WebLink.module.scss';
 
+type WebLink = {
+  children: React.ReactNode;
+  className?: string | undefined;
+  href: string;
+  isTargetBlank?: boolean;
+  nextLinkProps?: object;
+  onClick?: () => void | undefined;
+};
+
 /* eslint-disable react/jsx-props-no-spreading */
 export default function WebLink({
   children,
@@ -15,14 +24,7 @@ export default function WebLink({
   nextLinkProps,
   onClick,
   ...props
-}: {
-  children: React.ReactNode;
-  className?: string | object;
-  href: string;
-  isTargetBlank: boolean;
-  nextLinkProps: object;
-  onClick?: () => void;
-}) {
+}: WebLink) {
   const isNewTab = isTargetBlank
     ? { rel: 'noopener noreferrer', target: '_blank' }
     : null;
