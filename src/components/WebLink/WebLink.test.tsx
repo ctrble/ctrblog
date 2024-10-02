@@ -10,22 +10,10 @@ describe('WebLink', () => {
 
     const link = screen.getByRole('link', { name: /hello world/i });
 
-    // expect(link).toBeVisible();
     expect(link.href).toContain('/');
     expect(link.rel).toBeFalsy();
     expect(link.target).toBeFalsy();
-    // expect(link).toHaveClass('webLink');
   });
-
-  // test('renders WebLink with a div when no href is provided', () => {
-  //   render(<WebLink>Not a link</WebLink>);
-
-  //   const link = screen.getByText(/not a link/i);
-
-  //   // expect(link).toBeVisible();
-  //   expect(link.href).toBeFalsy();
-  //   // expect(link).toHaveClass('webLink');
-  // });
 
   test('renders WebLink with new tab attributes when an external href is provided', () => {
     render(
@@ -36,10 +24,25 @@ describe('WebLink', () => {
 
     const link = screen.getByRole('link', { name: /go/i });
 
-    // expect(link).toBeVisible();
     expect(link.href).toContain('google.com');
     expect(link.rel).toContain('noopener noreferrer');
     expect(link.target).toContain('_blank');
-    // expect(link).toHaveClass('webLink');
+  });
+
+  test('renders WebLink with the correct class', () => {
+    const { rerender } = render(<WebLink href='/'>Hello World</WebLink>);
+
+    const link = screen.getByRole('link', { name: /hello world/i });
+
+    expect(link.classList.contains('webLink')).toBe(true);
+
+    rerender(
+      <WebLink className='test' href='/'>
+        Hello World
+      </WebLink>,
+    );
+
+    expect(link.classList.contains('webLink')).toBe(false);
+    expect(link.classList.contains('test')).toBe(true);
   });
 });
