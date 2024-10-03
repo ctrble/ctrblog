@@ -15,28 +15,21 @@ type WebLink = {
   onClick?: () => void | undefined;
 };
 
-/* eslint-disable react/jsx-props-no-spreading */
 export default function WebLink({
   children,
   className,
   href,
   isTargetBlank,
-  nextLinkProps,
   onClick,
-  ...props
 }: WebLink) {
-  const isNewTab = isTargetBlank
-    ? { rel: 'noopener noreferrer', target: '_blank' }
-    : null;
-
   if (isUrl(href)) {
     return (
       <a
         className={className || styles.webLink}
         href={href}
         onClick={onClick}
-        {...isNewTab}
-        {...props}
+        rel={isTargetBlank ? 'noopener noreferrer' : undefined}
+        target={isTargetBlank ? '_blank' : undefined}
       >
         {children}
       </a>
@@ -48,9 +41,8 @@ export default function WebLink({
       className={className || styles.webLink}
       href={href}
       onClick={onClick}
-      {...nextLinkProps}
-      {...isNewTab}
-      {...props}
+      rel={isTargetBlank ? 'noopener noreferrer' : undefined}
+      target={isTargetBlank ? '_blank' : undefined}
     >
       {children}
     </Link>
