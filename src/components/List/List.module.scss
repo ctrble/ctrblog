@@ -1,0 +1,8 @@
+@use '/src/styles/variables';
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: variables.$gap-xl;
+}

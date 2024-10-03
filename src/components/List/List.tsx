@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './List.module.scss';
+
 type ListItem = {
   id: number;
   child: JSX.Element;
@@ -11,7 +13,7 @@ type List = {
 
 export default function List({ items }: List) {
   return (
-    <ul>
+    <ul className={styles.list}>
       {items.map((item) => (
         <li key={item.id}>{item.child}</li>
       ))}

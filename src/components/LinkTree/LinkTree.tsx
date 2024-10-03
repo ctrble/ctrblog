@@ -7,28 +7,30 @@ import { URLS } from '@/data/constants';
 import List from '@/components/List';
 import WebLink from '@/components/WebLink';
 
+import styles from './LinkTree.module.scss';
+
 const items = [
   {
     id: 1,
     child: (
-      <WebLink href={URLS.GITHUB}>
-        <AiFillGithub />
+      <WebLink className={styles.link} href={URLS.GITHUB}>
+        <AiFillGithub size={styles.var_iconSize} />
       </WebLink>
     ),
   },
   {
     id: 2,
     child: (
-      <WebLink href={URLS.CODEPEN}>
-        <FiCodepen />
+      <WebLink className={styles.link} href={URLS.CODEPEN}>
+        <FiCodepen size={styles.var_iconSize} />
       </WebLink>
     ),
   },
   {
     id: 3,
     child: (
-      <WebLink href={URLS.LINKEDIN}>
-        <AiFillLinkedin />
+      <WebLink className={styles.link} href={URLS.LINKEDIN}>
+        <AiFillLinkedin size={styles.var_iconSize} />
       </WebLink>
     ),
   },
@@ -36,9 +38,8 @@ const items = [
 
 export default function LinkTree() {
   return (
-    <>
-      <h2>Find Me</h2>
+    <aside>
       <List items={items} />
-    </>
+    </aside>
   );
 }

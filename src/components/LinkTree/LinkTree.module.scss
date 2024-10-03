@@ -1,0 +1,13 @@
+@use '/src/styles/variables';
+
+:export {
+  var_iconSize: 32px;
+}
+
+.link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 20vmax;
+  aspect-ratio: 1 / 1;
+}
