@@ -10,6 +10,7 @@ type WebLink = {
   children: React.ReactNode;
   className?: string | undefined;
   href: string;
+  label?: string;
   nextLinkProps?: object;
   onClick?: () => void | undefined;
 };
@@ -18,11 +19,13 @@ export default function WebLink({
   children,
   className,
   href,
+  label,
   onClick,
 }: WebLink) {
   if (isUrl(href)) {
     return (
       <a
+        aria-label={label}
         className={className || styles.webLink}
         href={href}
         onClick={onClick}
@@ -35,7 +38,12 @@ export default function WebLink({
   }
 
   return (
-    <Link className={className || styles.webLink} href={href} onClick={onClick}>
+    <Link
+      aria-label={label}
+      className={className || styles.webLink}
+      href={href}
+      onClick={onClick}
+    >
       {children}
     </Link>
   );

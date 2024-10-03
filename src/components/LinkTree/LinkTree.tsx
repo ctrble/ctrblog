@@ -13,7 +13,7 @@ const items = [
   {
     id: 1,
     child: (
-      <WebLink className={styles.link} href={URLS.GITHUB}>
+      <WebLink label='GitHub' className={styles.link} href={URLS.GITHUB}>
         <AiFillGithub size={styles.var_iconSize} />
       </WebLink>
     ),
@@ -21,7 +21,7 @@ const items = [
   {
     id: 2,
     child: (
-      <WebLink className={styles.link} href={URLS.CODEPEN}>
+      <WebLink label='Codepen' className={styles.link} href={URLS.CODEPEN}>
         <FiCodepen size={styles.var_iconSize} />
       </WebLink>
     ),
@@ -29,7 +29,7 @@ const items = [
   {
     id: 3,
     child: (
-      <WebLink className={styles.link} href={URLS.LINKEDIN}>
+      <WebLink label='LinkedIn' className={styles.link} href={URLS.LINKEDIN}>
         <AiFillLinkedin size={styles.var_iconSize} />
       </WebLink>
     ),
