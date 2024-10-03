@@ -9,6 +9,10 @@ body {
   font-family: variables.$font-family-mono;
   font-size: variables.$font-size-base;
   font-weight: variables.$font-weight-normal;
+
+  *:focus {
+    outline-color: variables.$color-dark;
+  }
 }
 
 section {
