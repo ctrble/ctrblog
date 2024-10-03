@@ -4,11 +4,15 @@
 // Colors
 $color-blue: #2a35cf;
 $color-cream: #dae7e4;
-$color-green: #257b3e;
-$color-green-light: #91f9b2;
+// $color-green: #257b3e;
+// $color-green-light: #91f9b2;
+$color-green: #298159;
+$color-green-light: #fafef8;
 
-$color-light: $color-green-light;
-$color-dark: $color-green;
+// $color-light: $color-cream;
+// $color-dark: $color-blue;
+$color-light: $color-green;
+$color-dark: $color-green-light;
 
 // Fonts
 $font-family-display: var(--font-belanosima);
