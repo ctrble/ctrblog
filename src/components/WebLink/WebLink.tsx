@@ -10,7 +10,6 @@ type WebLink = {
   children: React.ReactNode;
   className?: string | undefined;
   href: string;
-  isTargetBlank?: boolean;
   nextLinkProps?: object;
   onClick?: () => void | undefined;
 };
@@ -19,7 +18,6 @@ export default function WebLink({
   children,
   className,
   href,
-  isTargetBlank,
   onClick,
 }: WebLink) {
   if (isUrl(href)) {
@@ -28,8 +26,8 @@ export default function WebLink({
         className={className || styles.webLink}
         href={href}
         onClick={onClick}
-        rel={isTargetBlank ? 'noopener noreferrer' : undefined}
-        target={isTargetBlank ? '_blank' : undefined}
+        rel={'noopener noreferrer'}
+        target={'_blank'}
       >
         {children}
       </a>
@@ -37,13 +35,7 @@ export default function WebLink({
   }
 
   return (
-    <Link
-      className={className || styles.webLink}
-      href={href}
-      onClick={onClick}
-      rel={isTargetBlank ? 'noopener noreferrer' : undefined}
-      target={isTargetBlank ? '_blank' : undefined}
-    >
+    <Link className={className || styles.webLink} href={href} onClick={onClick}>
       {children}
     </Link>
   );
