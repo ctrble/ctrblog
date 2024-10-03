@@ -17,12 +17,43 @@ section {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: variables.$font-family-display;
+  margin-bottom: variables.$gap-md;
+}
+
+h1 {
+  font-size: clamp(
+    #{variables.$font-size-xl},
+    calc(1rem + 3vw),
+    #{variables.$font-size-xxl}
+  );
+}
+
+h2 {
+  font-size: clamp(
+    #{variables.$font-size-md},
+    calc(1rem + 3vw),
+    #{variables.$font-size-xl}
+  );
+}
+
+h3 {
+  font-size: clamp(
+    #{variables.$font-size-sm},
+    calc(1rem + 3vw),
+    #{variables.$font-size-lg}
+  );
 }
 
 p {
   margin-bottom: variables.$gap-sm;
+  font-size: clamp(
+    #{variables.$font-size-sm},
+    calc(1rem + 3vw),
+    #{variables.$font-size-sm}
+  );
 }
 
 a {

@@ -1,4 +1,8 @@
 import WebLink from '@/components/WebLink';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { FiCodepen } from 'react-icons/fi';
+
+import { URLS } from '@/data/constants';
 
 import styles from './page.module.scss';
 
@@ -11,19 +15,23 @@ export default function Home() {
           <p>Making things move on the computer screen still sparks joy.</p>
           <hr />
           <h2>Find Me</h2>
-          <ol>
+          <ul>
             <li>
-              <WebLink href='https://github.com/ctrble'>GitHub</WebLink>
-            </li>
-            <li>
-              <WebLink href='https://codepen.io/ctrble'>Codepen</WebLink>
-            </li>
-            <li>
-              <WebLink href='www.linkedin.com/in/charlotte-trible'>
-                LinkedIn
+              <WebLink href={URLS.GITHUB}>
+                <AiFillGithub />
               </WebLink>
             </li>
-          </ol>
+            <li>
+              <WebLink href={URLS.CODEPEN}>
+                <FiCodepen />
+              </WebLink>
+            </li>
+            <li>
+              <WebLink href={URLS.LINKEDIN}>
+                <AiFillLinkedin />
+              </WebLink>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

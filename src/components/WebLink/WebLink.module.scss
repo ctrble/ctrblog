@@ -1,5 +1,9 @@
 @use '/src/styles/mixins';
 
 .webLink {
-  @include mixins.blink();
+  display: inline-block;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
