@@ -24,6 +24,7 @@ h1,
 h2,
 h3 {
   font-family: variables.$font-family-display;
+  text-wrap: balance;
   margin-bottom: variables.$gap-md;
 }
 
@@ -52,12 +53,13 @@ h3 {
 }
 
 p {
-  margin-bottom: variables.$gap-sm;
   font-size: clamp(
     #{variables.$font-size-sm},
     calc(1rem + 3vw),
     #{variables.$font-size-sm}
   );
+  text-wrap: balance;
+  margin-bottom: variables.$gap-sm;
 }
 
 a {
