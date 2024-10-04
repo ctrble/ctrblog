@@ -24,15 +24,15 @@ h1,
 h2,
 h3 {
   font-family: variables.$font-family-display;
-  text-wrap: balance;
+  text-wrap: pretty;
   margin-bottom: variables.$gap-md;
 }
 
 h1 {
   font-size: clamp(
-    #{variables.$font-size-xl},
-    calc(1rem + 3vw),
-    #{variables.$font-size-xxl}
+    #{variables.$font-size-xxl},
+    calc(1rem + 5vw),
+    #{variables.$font-size-xxl * 2}
   );
 }
 
@@ -58,7 +58,7 @@ p {
     calc(1rem + 3vw),
     #{variables.$font-size-sm}
   );
-  text-wrap: balance;
+  text-wrap: pretty;
   margin-bottom: variables.$gap-sm;
 }
 
