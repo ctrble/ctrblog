@@ -16,7 +16,6 @@ body {
 }
 
 section {
-  border: 2px solid variables.$color-dark;
   padding: 2em;
 }
 
@@ -58,6 +57,7 @@ p {
     calc(1rem + 3vw),
     #{variables.$font-size-sm}
   );
+  font-weight: variables.$font-weight-light;
   text-wrap: pretty;
   margin-bottom: variables.$gap-sm;
 }

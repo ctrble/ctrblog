@@ -7,12 +7,24 @@
 
 .inner {
   display: grid;
-  place-items: center;
+  align-content: center;
+  grid-template-rows: 1fr auto;
   width: 100%;
   height: 100%;
   overflow-y: auto;
+  border: 2px solid variables.$color-dark;
+}
 
-  > * {
-    max-width: 66ch;
-  }
+.content {
+  place-self: center;
+  max-width: 66ch;
+}
+
+.footer {
+  place-self: end;
+}
+
+.footer__link {
+  $magic-icon-alignment: 3px;
+  margin-right: $magic-icon-alignment;
 }

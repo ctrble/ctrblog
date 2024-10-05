@@ -1,5 +1,10 @@
-import LinkTree from '@/components/LinkTree';
 import * as motion from 'framer-motion/client';
+import { GoFileCode } from 'react-icons/go';
+
+import LinkTree from '@/components/LinkTree';
+import WebLink from '@/components/WebLink';
+import { URLS } from '@/data/constants';
+
 import styles from './page.module.scss';
 
 const animationVariants = {
@@ -21,18 +26,24 @@ export default function Home() {
       transition={{ duration: 0.5, easing: 'ease-in-out' }}
       className={styles.outer}
     >
-      <section className={styles.inner}>
-        <div>
+      <div className={styles.inner}>
+        <section className={styles.content}>
           <h1>Hey! I&apos;m Charlotte and I love building websites.</h1>
           <p>
-            Playful experiences and highly tuned efficiency are my jam. If
-            you're looking for an experienced and pragmatic front-end engineer,
-            I'm your gal!
+            Playful experiences are my jam. If you&apos;re looking for an
+            experienced and pragmatic front-end engineer, I&apos;m your gal!
           </p>
           <hr />
           <LinkTree />
-        </div>
-      </section>
+        </section>
+
+        {/* TODO: move to corner, add animation */}
+        <footer className={styles.footer}>
+          <WebLink className={styles.footer__link} href={URLS.SOURCE}>
+            <GoFileCode />
+          </WebLink>
+        </footer>
+      </div>
     </motion.main>
   );
 }
