@@ -22,9 +22,23 @@
 
 .footer {
   place-self: end;
+
+  &:focus-within,
+  &:focus,
+  &:hover {
+    > * {
+      $offset: 3px;
+      transform: translate(-$offset, -$offset) scale(1.1);
+      transition: variables.$transition;
+      outline: none;
+    }
+  }
 }
 
 .footer__link {
-  $magic-icon-alignment: 3px;
-  margin-right: $magic-icon-alignment;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  $magic-icon-alignment: 2px;
+  margin-bottom: $magic-icon-alignment;
 }

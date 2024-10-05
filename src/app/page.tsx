@@ -37,10 +37,14 @@ export default function Home() {
           <LinkTree />
         </section>
 
-        {/* TODO: move to corner, add animation */}
+        {/* TODO: clean this up */}
         <footer className={styles.footer}>
-          <WebLink className={styles.footer__link} href={URLS.SOURCE}>
-            <GoFileCode />
+          <WebLink
+            className={styles.footer__link}
+            href={URLS.SOURCE}
+            label='view source'
+          >
+            <GoFileCode size={16} />
           </WebLink>
         </footer>
       </div>
