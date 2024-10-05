@@ -2,9 +2,9 @@
 // Reference mixins with: @include mixins.mixin-name()
 
 @mixin blink($speed: 2s) {
-  animation: $speed linear infinite condemned-blink-effect;
+  animation: $speed linear infinite objectionable-blink-effect;
 
-  @keyframes condemned-blink-effect {
+  @keyframes objectionable-blink {
     0% {
       visibility: hidden;
     }
@@ -15,6 +15,20 @@
 
     100% {
       visibility: visible;
+    }
+  }
+}
+
+@mixin marquee($speed: 5s) {
+  position: absolute;
+  animation: $speed linear infinite objectionable-marquee;
+
+  @keyframes objectionable-marquee {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
     }
   }
 }
