@@ -3,6 +3,7 @@ import React from 'react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FiCodepen } from 'react-icons/fi';
 import { FaItchIo } from 'react-icons/fa6';
+import { IoIosMail } from 'react-icons/io';
 
 import { URLS } from '@/data/constants';
 
@@ -55,6 +56,14 @@ const items = [
     child: (
       <WebLink label='Itch.io' className={styles.link} href={URLS.ITCHIO}>
         <FaItchIo />
+      </WebLink>
+    ),
+  },
+  {
+    id: 6,
+    child: (
+      <WebLink label='Email Me' className={styles.link} href={URLS.EMAIL}>
+        <IoIosMail />
       </WebLink>
     ),
   },

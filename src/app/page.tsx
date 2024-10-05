@@ -40,12 +40,12 @@ export default function Home() {
       <div className={styles.inner}>
         <motion.section
           variants={{
-            visible: { transition: { staggerChildren: 0.2 } },
             hidden: {},
+            visible: { transition: { staggerChildren: 0.2 } },
           }}
           layout
-          animate='visible'
           initial='hidden'
+          animate='visible'
           className={styles.content}
         >
           <motion.h1 variants={contentVariants}>{text.intro}</motion.h1>
