@@ -1,0 +1,75 @@
+@use '/src/styles/variables';
+
+html {
+  background-color: variables.$color-light;
+}
+
+body {
+  color: variables.$color-dark;
+  font-family: variables.$font-family-mono;
+  font-size: variables.$font-size-base;
+  font-weight: variables.$font-weight-normal;
+
+  *:focus {
+    outline-color: variables.$color-dark;
+  }
+}
+
+section {
+  padding: variables.$gap-md;
+}
+
+hr {
+  border-color: variables.$color-dark;
+  margin-top: variables.$gap-md;
+  margin-bottom: variables.$gap-md;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  font-family: variables.$font-family-display;
+  text-wrap: pretty;
+  margin-bottom: variables.$gap-md;
+}
+
+h1 {
+  font-size: clamp(
+    #{variables.$font-size-xl},
+    calc(1rem + 5vw),
+    #{variables.$font-size-xxl}
+  );
+}
+
+h2 {
+  font-size: clamp(
+    #{variables.$font-size-md},
+    calc(1rem + 3vw),
+    #{variables.$font-size-xl}
+  );
+}
+
+h3 {
+  font-size: clamp(
+    #{variables.$font-size-sm},
+    calc(1rem + 3vw),
+    #{variables.$font-size-lg}
+  );
+}
+
+p {
+  line-height: 1.75;
+  font-size: clamp(
+    #{variables.$font-size-sm},
+    calc(1rem + 3vw),
+    #{variables.$font-size-sm}
+  );
+  font-weight: variables.$font-weight-light;
+  text-wrap: pretty;
+  margin-bottom: variables.$gap-sm;
+}
+
+a {
+  color: variables.$color-dark;
+}

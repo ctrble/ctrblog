@@ -1,0 +1,29 @@
+@use '/src/styles/variables';
+
+$icon-size: 28px;
+
+.link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: variables.$gap-sm;
+  border-radius: variables.$radius-circle;
+  transition: variables.$transition;
+
+  &:focus {
+    transform: scale(1.1);
+    outline-width: 2px;
+    outline-style: dashed;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    outline-width: 1px;
+    outline-style: dashed;
+  }
+
+  > * {
+    width: $icon-size;
+    height: $icon-size;
+  }
+}

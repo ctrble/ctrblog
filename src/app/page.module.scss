@@ -1,0 +1,22 @@
+@use '/src/styles/variables';
+@use '/src/styles/mixins';
+
+.outer {
+  height: 100dvh;
+  padding: variables.$gap-md;
+}
+
+.inner {
+  display: grid;
+  align-content: center;
+  grid-template-rows: 1fr auto;
+  width: 100%;
+  height: 100%;
+  border: 2px solid variables.$color-dark;
+  overflow-y: auto;
+}
+
+.content {
+  place-self: center;
+  max-width: 66ch;
+}

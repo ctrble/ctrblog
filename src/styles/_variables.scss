@@ -1,0 +1,43 @@
+// Import this file with: @use '/src/styles/variables';
+// Reference variables with: variables.$variable-name
+
+// Colors
+$color-blue: #2a35cf;
+$color-cream: #dae7e4;
+// $color-green: #257b3e;
+// $color-green-light: #91f9b2;
+$color-green: #298159;
+$color-green-light: #fafef8;
+
+// $color-light: $color-cream;
+// $color-dark: $color-blue;
+$color-light: $color-green;
+$color-dark: $color-green-light;
+
+// Fonts
+$font-family-display: var(--font-palanquin-dark);
+$font-family-mono: var(--font-martian-mono);
+
+$font-weight-light: 400;
+$font-weight-normal: 600;
+$font-weight-bold: 700;
+$font-size-xs: 1.4rem;
+$font-size-sm: 1.6rem;
+$font-size-md: 1.8rem;
+$font-size-lg: 2rem;
+$font-size-xl: 2.4rem;
+$font-size-xxl: 4.8rem;
+
+$font-size-base: $font-size-sm;
+
+// Grid
+$gap-xs: 4px;
+$gap-sm: 8px;
+$gap-md: 16px;
+$gap-lg: 32px;
+$gap-xl: 64px;
+$gap-xxl: 128px;
+
+// Decorations
+$transition: 100ms cubic-bezier(0.83, 0, 0.17, 1);
+$radius-circle: 100vmax;
