@@ -9,9 +9,7 @@
     "lint:js": "eslint \".\" --fix",
     "start": "next start",
     "test": "jest",
-    "test:unit": "jest ${0:-.} --verbose",
-    "test:unit:ci": "jest ${0:-.} --ci",
-    "test:unit:watch": "jest --watch --detectOpenHandles"
+    "test:watch": "jest --watch --detectOpenHandles"
   },
   "dependencies": {
     "classnames": "^2.5.1",
