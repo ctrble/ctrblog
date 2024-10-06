@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
-import { Martian_Mono, Palanquin_Dark } from 'next/font/google';
+
 import classNames from 'classnames';
+import { Martian_Mono, Palanquin_Dark } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 import '@/styles/index.scss';
 
@@ -34,6 +36,7 @@ export default function RootLayout({
         className={classNames(martianMono.variable, palanquinDark.variable)}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
