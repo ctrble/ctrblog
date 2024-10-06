@@ -1,4 +1,5 @@
 [![Deployment Status](https://img.shields.io/endpoint?url=https://ctrblog.vercel.app/api/deployment)](https://ctrblog.vercel.app/)
+![Vercel Deploy](https://deploy-badge.vercel.app/vercel/ctrblog)
 
 # Hi!
 
