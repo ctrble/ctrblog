@@ -1,17 +1,17 @@
 @use '/src/styles/variables';
 
 html {
-  background-color: variables.$color-light;
+  background-color: variables.$color-primary;
 }
 
 body {
-  color: variables.$color-dark;
+  color: variables.$color-accent;
   font-family: variables.$font-family-mono;
   font-size: variables.$font-size-base;
   font-weight: variables.$font-weight-normal;
 
   *:focus {
-    outline-color: variables.$color-dark;
+    outline-color: variables.$color-accent;
   }
 }
 
@@ -20,7 +20,7 @@ section {
 }
 
 hr {
-  border-color: variables.$color-dark;
+  border-color: variables.$color-accent;
   margin-top: variables.$gap-md;
   margin-bottom: variables.$gap-md;
 }
@@ -71,5 +71,5 @@ p {
 }
 
 a {
-  color: variables.$color-dark;
+  color: variables.$color-accent;
 }
