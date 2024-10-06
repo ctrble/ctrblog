@@ -4,6 +4,4 @@ export const URLS = Object.freeze({
   LINKEDIN: 'https://www.linkedin.com/in/charlotte-trible',
   FLYOVER_INDIES: 'https://www.flyoverindies.party',
   ITCHIO: 'https://espiongames.itch.io/',
-  SOURCE: 'https://github.com/ctrble/ctrblog',
-  EMAIL: 'mailto:ctrble@gmail.com',
 });

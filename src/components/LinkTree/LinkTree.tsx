@@ -3,7 +3,6 @@ import React from 'react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FiCodepen } from 'react-icons/fi';
 import { FaItchIo } from 'react-icons/fa6';
-import { IoIosMail } from 'react-icons/io';
 
 import { URLS } from '@/data/constants';
 
@@ -13,7 +12,6 @@ import WebLink from '@/components/WebLink';
 
 import styles from './LinkTree.module.scss';
 
-// TODO: also add itch.io
 const items = [
   {
     id: 1,
@@ -56,14 +54,6 @@ const items = [
     child: (
       <WebLink label='Itch.io' className={styles.link} href={URLS.ITCHIO}>
         <FaItchIo />
-      </WebLink>
-    ),
-  },
-  {
-    id: 6,
-    child: (
-      <WebLink label='Email Me' className={styles.link} href={URLS.EMAIL}>
-        <IoIosMail />
       </WebLink>
     ),
   },

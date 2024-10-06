@@ -49,7 +49,6 @@ export default function Home() {
           className={styles.content}
         >
           <motion.h1 variants={contentVariants}>{text.intro}</motion.h1>
-          <motion.p variants={contentVariants}>{text.about}</motion.p>
           <motion.hr variants={contentVariants} />
           <motion.div variants={contentVariants}>
             <LinkTree />
