@@ -19,6 +19,12 @@ section {
   padding: variables.$gap-md;
 }
 
+hr {
+  border-color: variables.$color-dark;
+  margin-top: variables.$gap-md;
+  margin-bottom: variables.$gap-md;
+}
+
 h1,
 h2,
 h3 {
@@ -66,10 +72,4 @@ p {
 
 a {
   color: variables.$color-dark;
-}
-
-hr {
-  border-color: variables.$color-dark;
-  margin-top: 2em;
-  margin-bottom: 2em;
 }
